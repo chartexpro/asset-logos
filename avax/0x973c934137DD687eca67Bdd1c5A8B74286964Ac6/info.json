@@ -1,0 +1,6 @@
+{
+    "name": "ARGENT",
+    "website": "https://complus.network/argent",
+    "short_description": "Argent is a ARC20 token and it's value equal to one troy ounce (t oz) Silver. It is Ownable, Pausable, Burn and Mint controlled by a central SupplyController",
+    "explorer": "https://cchain.explorer.avax.network/address/0x973c934137DD687eca67Bdd1c5A8B74286964Ac6/contracts"
+}

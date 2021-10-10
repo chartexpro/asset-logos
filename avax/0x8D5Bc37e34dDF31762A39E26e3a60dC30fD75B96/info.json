@@ -1,0 +1,6 @@
+{
+    "name": "CUPRUM",
+    "website": "https://complus.network/cuprum",
+    "short_description": "Cuprum is a ARC20 token and it's value equal to one pound (lb) of Copper. It is Ownable, Pausable, Burn and Mint controlled by a central SupplyController",
+    "explorer": "https://cchain.explorer.avax.network/address/0x8D5Bc37e34dDF31762A39E26e3a60dC30fD75B96/contracts"
+}
