@@ -1,11 +1,16 @@
 const fs = require("fs");
+const { from } = require("@iotexproject/iotex-address-ts");
+const { toChecksumAddress } = require("ethereum-checksum-address");
 
-fs.readdirSync("./ftm").map((fileName) => {
-  const addr = fileName.split(".png")[0];
+fs.readdirSync("./iotex").map((fileName) => {
+  let addr = fileName.split(".png")[0];
   if (addr === fileName) {
     console.log("error with ", fileName);
   } else {
-    fs.mkdirSync(`./ftm/${addr}`, { recursive: true });
-    fs.copyFileSync(`./ftm/${fileName}`, `./ftm/${addr}/logo.png`);
+    let addrIo = from(addr);
+    let addrEth = addrIo.stringEth();
+    let checkedAddr = toChecksumAddress(addrEth);
+    fs.mkdirSync(`./iotex/${checkedAddr}`, { recursive: true });
+    fs.copyFileSync(`./iotex/${fileName}`, `./iotex/${checkedAddr}/logo.png`);
   }
 });
